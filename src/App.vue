@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <expandable-text>
+    <expandable-text 
+      :lines="3"
+      @toggled="isExpanded = !isExpanded"
+    >
       <template #content>
         <p>
           Some long text that needs to be truncated to a fixed 
@@ -21,10 +24,11 @@
         </p>
       </template>
       <template #toggler>
-        <a href="#" сlass="toggler">Свернуть</a>
+        <span href="#" сlass="toggler">
+          {{ isExpanded ? 'Свернуть' : 'Развернуть' }}
+        </span>
       </template>
     </expandable-text>
-    
   </div>
 </template>
 
@@ -38,7 +42,8 @@ export default {
   },
   data(){
     return {
-      isRed: true
+      isRed: true,
+      isExpanded: false
     }
   },
   methods: {
@@ -58,5 +63,10 @@ export default {
 
 .toggler {
   color: red;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 </style>
