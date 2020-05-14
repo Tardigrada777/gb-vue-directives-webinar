@@ -1,6 +1,6 @@
 <template>
   <div class="expandable-text">
-    <p v-line-clamp:20="maxLines">
+    <p v-line-clamp:[lineHeight]="maxLines">
       <slot name="content"></slot>
     </p>
     <a href="#" @click="toggle">
@@ -16,6 +16,10 @@ export default {
     lines: {
       type: Number,
       default: () => 1
+    },
+    lineHeight: {
+      type: Number,
+      default: () => 20
     }
   },
   data() {
