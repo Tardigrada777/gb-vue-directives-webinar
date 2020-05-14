@@ -1,18 +1,41 @@
 <template>
   <div id="app">
-    <p v-line-clamp:20="1">
-      Some long text that needs to be truncated to a fixed 
-      number, which is 2 in this case. And if the browser 
-      doesn't support `-webkit-line-clamp`, then a 
-      line-height of 20px is going to be used in order to 
-      truncate this text, thus calculating its max-height.
-    </p>
+    <expandable-text>
+      <template #content>
+        <p>
+          Some long text that needs to be truncated to a fixed 
+          number, which is 2 in this case. And if the browser 
+          doesn't support `-webkit-line-clamp`, then a 
+          line-height of 20px is going to be used in order to 
+          truncate this text, thus calculating its max-height.
+          Some long text that needs to be truncated to a fixed 
+          number, which is 2 in this case. And if the browser 
+          doesn't support `-webkit-line-clamp`, then a 
+          line-height of 20px is going to be used in order to 
+          truncate this text, thus calculating its max-height.
+          Some long text that needs to be truncated to a fixed 
+          number, which is 2 in this case. And if the browser 
+          doesn't support `-webkit-line-clamp`, then a 
+          line-height of 20px is going to be used in order to 
+          truncate this text, thus calculating its max-height.
+        </p>
+      </template>
+      <template #toggler>
+        <a href="#" сlass="toggler">Свернуть</a>
+      </template>
+    </expandable-text>
+    
   </div>
 </template>
 
 <script>
+import ExpandableText from '@/components/ExpandableText';
+
 export default {
   name: 'App',
+  components: {
+    ExpandableText
+  },
   data(){
     return {
       isRed: true
@@ -33,16 +56,7 @@ export default {
   max-width: 600px;
 }
 
-.red, .green {
-  height: 75px;
-  margin-top: 50px;
-}
-
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
+.toggler {
+  color: red;
 }
 </style>
