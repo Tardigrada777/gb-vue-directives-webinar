@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <button @click="toggle">toogle</button>
-    <div v-if="isRed" class="red"></div>
-    <div v-else class="green"></div>
+    <input v-focus>
   </div>
 </template>
 
