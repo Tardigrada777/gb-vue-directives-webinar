@@ -7810,6 +7810,11 @@ vue-hot-reload-api@^2.3.0:
   resolved "https://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha1-UylVzB6yCKPZkLOp+acFdGV+CPI=
 
+vue-line-clamp@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/vue-line-clamp/-/vue-line-clamp-1.3.2.tgz#004b6399d9093c1955d961fd50d0ba122aad6330"
+  integrity sha512-SuZlRDBKsTlMOSLsJsceJPM7Sd2wcaKayyMEsf65b33chuK1zgTIU1RqlbAXSxO2R+FOQV5rYHLiAopdwVjroQ==
+
 vue-loader@^15.9.1:
   version "15.9.2"
   resolved "https://registry.npm.taobao.org/vue-loader/download/vue-loader-15.9.2.tgz?cache=0&sync_timestamp=1589275160740&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-loader%2Fdownload%2Fvue-loader-15.9.2.tgz#ae01f5f4c9c6a04bff4483912e72ef91a402c1ae"
